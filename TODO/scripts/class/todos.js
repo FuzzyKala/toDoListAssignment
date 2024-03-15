@@ -25,6 +25,30 @@ class Todos {
         );
     });
   };
+  addTask = async (task) => {
+    return new Promise(async (resolve, reject) => {
+      const json = JSON.stringify({ description: task });
+      const body = {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: json,
+      };
+      fetch(this.#backendRootUrl + "/new", body)
+        .then((response) => response.json())
+        .then(
+          (json) => {
+            console.log(json.id, json.task);
+            resolve(this.#addToArray(json.id, task));
+          },
+          (err) => {
+            reject(err);
+          }
+        );
+    });
+  };
+  // read tasks from database and push them into the local array this.#tasks
   #readJson = (tasksAsJson) => {
     tasksAsJson.forEach((node) => {
       // transfer json data to task class. but why?
@@ -32,6 +56,12 @@ class Todos {
       this.#tasks.push(task);
     });
   };
-}
+  // add current task from input area and push them into the local array this.#tasks
 
+  #addToArray = (id, text) => {
+    const task = new Task(id, text);
+    this.#tasks.push(task);
+    return task;
+  };
+}
 export { Todos };

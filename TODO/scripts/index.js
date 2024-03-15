@@ -8,7 +8,8 @@ const list = document.querySelector("ul");
 const input = document.querySelector("input");
 
 const renderTask = (task) => {
-  console.log(task);
+  // console.log(task);
+
   const li = document.createElement("li");
   li.setAttribute("class", "list-group-item");
   li.innerHTML = task.getText();
@@ -62,15 +63,30 @@ const saveTasks = async (task) => {
 };
 
 // assignment 3 - EventListener
+// input.addEventListener("keypress", (event) => {
+//   if (event.key === "Enter") {
+//     event.preventDefault();
+//     const task = input.value.trim();
+//     if (task !== "") {
+//       saveTasks(task).then((e) => {
+//         renderTask(task);
+//       });
+//       input.value = "";
+//     }
+//   }
+// });
+
+// assignment 4 - EventListener
 input.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
     event.preventDefault();
     const task = input.value.trim();
     if (task !== "") {
-      saveTasks(task).then((e) => {
+      todos.addTask(task).then((task) => {
         renderTask(task);
+        input.value = "";
+        input.focus();
       });
-      input.value = "";
     }
   }
 });
