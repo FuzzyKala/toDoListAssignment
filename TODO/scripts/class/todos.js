@@ -8,10 +8,11 @@ class Todos {
 
   getTasks = async () => {
     return new Promise(async (resolve, reject) => {
-      //   console.log(this.#backendRootUrl);
+      // console.log(this.#backendRootUrl);
       fetch(this.#backendRootUrl)
         .then((res) => {
-          res.json();
+          // res.json() should be return when there's {} but doesn't need if not.
+          return res.json();
         })
         .then(
           (json) => {
@@ -26,7 +27,7 @@ class Todos {
   };
   #readJson = (tasksAsJson) => {
     tasksAsJson.forEach((node) => {
-      // transfer json data to task class. but why.
+      // transfer json data to task class. but why?
       const task = new Task(node.id, node.description);
       this.#tasks.push(task);
     });
