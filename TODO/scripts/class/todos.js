@@ -49,6 +49,22 @@ class Todos {
         );
     });
   };
+  removeTask = (id) => {
+    return new Promise(async (resolve, reject) => {
+      fetch(this.#backendRootUrl + "/delete/" + id, { method: "delete" })
+        .then((res) => res.json())
+        .then(
+          (json) => {
+            this.#removeFromArray(id);
+            resolve(json);
+          },
+          (err) => {
+            reject(err);
+          }
+        );
+    });
+  };
+
   // read tasks from database and push them into the local array this.#tasks
   #readJson = (tasksAsJson) => {
     // console.log(tasksAsJson[0]);
@@ -65,6 +81,10 @@ class Todos {
     const task = new Task(id, text);
     this.#tasks.push(task);
     return task;
+  };
+  #removeFromArray = (id) => {
+    const arrayWithoutRemoved = this.#tasks.filter((task) => task.id !== id);
+    this.#tasks = arrayWithoutRemoved;
   };
 }
 export { Todos };

@@ -10,8 +10,34 @@ const input = document.querySelector("input");
 const renderTask = (task) => {
   const li = document.createElement("li");
   li.setAttribute("class", "list-group-item");
-  li.innerHTML = task.getText();
+  li.setAttribute("data-key", task.getId().toString());
+  // li.innerHTML = task.getText();
+  renderSpan(li, task.getText());
+  renderLink(li, task.getId());
   list.append(li);
+};
+
+// assignment 5 - renderSpan
+const renderSpan = (li, text) => {
+  const span = li.appendChild(document.createElement("span"));
+  span.innerHTML = text;
+};
+// assignment 5 - renderLink
+const renderLink = (li, id) => {
+  const a = li.appendChild(document.createElement("a"));
+  a.innerHTML = '<i class="bi bi-trash"></i>';
+  a.setAttribute("style", "float:right");
+  a.addEventListener("click", (event) => {
+    todos
+      .removeTask(id)
+      .then((removeId) => {
+        const liToRemove = document.querySelector(`[data-key="${removeId}"]`);
+        if (liToRemove) {
+          list.removeChild(liToRemove);
+        }
+      })
+      .catch((err) => alert(err));
+  });
 };
 
 // assignment 4 - getTasks
