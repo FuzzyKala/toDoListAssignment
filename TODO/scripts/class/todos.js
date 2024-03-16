@@ -25,6 +25,7 @@ class Todos {
         );
     });
   };
+
   addTask = async (task) => {
     return new Promise(async (resolve, reject) => {
       const json = JSON.stringify({ description: task });
@@ -39,7 +40,7 @@ class Todos {
         .then((response) => response.json())
         .then(
           (json) => {
-            console.log(json.id, json.task);
+            // console.log(json);
             resolve(this.#addToArray(json.id, task));
           },
           (err) => {
@@ -50,10 +51,12 @@ class Todos {
   };
   // read tasks from database and push them into the local array this.#tasks
   #readJson = (tasksAsJson) => {
+    // console.log(tasksAsJson[0]);
     tasksAsJson.forEach((node) => {
       // transfer json data to task class. but why?
       const task = new Task(node.id, node.description);
       this.#tasks.push(task);
+      // console.log(task);
     });
   };
   // add current task from input area and push them into the local array this.#tasks

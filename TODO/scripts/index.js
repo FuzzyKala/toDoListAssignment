@@ -2,20 +2,19 @@ import { Todos } from "./class/todos.js";
 const backendRootUrl = "http://localhost:3001";
 const todos = new Todos(backendRootUrl);
 // input.disabled = true;
-
 // console.log(todos);
+
 const list = document.querySelector("ul");
 const input = document.querySelector("input");
 
 const renderTask = (task) => {
-  // console.log(task);
-
   const li = document.createElement("li");
   li.setAttribute("class", "list-group-item");
   li.innerHTML = task.getText();
   list.append(li);
 };
 
+// assignment 4 - getTasks
 const getTasks = async () => {
   // because the return value in getTasks is a promise, so we can chain it with then.... like fetch
   todos
@@ -45,22 +44,22 @@ const getTasks = async () => {
 // };
 
 // assignment 3 - saveTasks
-const saveTasks = async (task) => {
-  try {
-    const json = JSON.stringify({ description: task });
-    const body = {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: json,
-    };
-    const response = await fetch(backendRootUrl + "/new", body);
-    return response.json();
-  } catch (error) {
-    alert("Error saving task " + error.message);
-  }
-};
+// const saveTasks = async (task) => {
+//   try {
+//     const json = JSON.stringify({ description: task });
+//     const body = {
+//       method: "post",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: json,
+//     };
+//     const response = await fetch(backendRootUrl + "/new", body);
+//     return response.json();
+//   } catch (error) {
+//     alert("Error saving task " + error.message);
+//   }
+// };
 
 // assignment 3 - EventListener
 // input.addEventListener("keypress", (event) => {
@@ -82,12 +81,26 @@ input.addEventListener("keypress", (event) => {
     event.preventDefault();
     const task = input.value.trim();
     if (task !== "") {
-      todos.addTask(task).then((task) => {
-        renderTask(task);
+      todos.addTask(task).then((e) => {
+        console.log(e);
+        renderTask(e);
         input.value = "";
         input.focus();
+        // console.log(todos.addTask(task));
       });
     }
   }
 });
+
 getTasks();
+
+// queries for assignment 4
+// 1. how could I divide code into different parts? base on what kinds of philosophy or logic?
+// 2. why does the meaning of using readJson function to transfer json data to be objects.
+// they're already objects. what are the advantages?
+
+// 4. I get a promise when I use fetch method(with await maybe) in async function, is that same as promise I get in "return new promise"
+// 5. how a promise is resolved? by resolve? (todos.addTask(task))
+
+// queries for assignment 5
+// why should I use async function for delete but doesn't have to for get and post?

@@ -5,6 +5,7 @@ const { Pool } = require("pg");
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 const port = 3001;
 
@@ -40,10 +41,26 @@ app.post("/new", (req, res) => {
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
-        res.status(200).json({ id: result.rows[0].id });
+        res
+          .status(200)
+          .json({ id: result.rows[0].id, desc: result.rows[0].description });
       }
     }
   );
+});
+
+// assignment 5 - delete
+app.delete("/delete/:id", async (req, res) => {
+  const pool = openDb();
+  const id = parseInt(req.params.id);
+  // console.log(id);
+  pool.query("delete from task where id = $1", [id], (err, result) => {
+    if (err) {
+      res.status(500).json({ error: err.message });
+    } else {
+      res.status(200).json({ id: id });
+    }
+  });
 });
 
 app.listen(port, () => {
