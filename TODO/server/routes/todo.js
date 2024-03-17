@@ -10,7 +10,7 @@ todoRouter.get("/", async (req, res) => {
     // this is for empty database checking.
     const rows = result.rows ? result.rows : [];
     res.status(200).json(rows);
-  } catch (error) {
+  } catch (err) {
     console.log(err);
     res.statusMessage = err;
     res.status(500).json({ error: err });
