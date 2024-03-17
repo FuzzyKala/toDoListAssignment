@@ -133,3 +133,6 @@ getTasks();
 
 // queries for assignment 6
 // what's the values paras in the query for? is it values = [] an array?
+
+// queries for assignment 7
+//
