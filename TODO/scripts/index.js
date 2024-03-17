@@ -1,5 +1,7 @@
 import { Todos } from "./class/todos.js";
-const backendRootUrl = "http://localhost:3001";
+const backendRootUrl = "https://todolistassignment.onrender.com";
+// const backendRootUrl = "http://localhost:3001";
+
 const todos = new Todos(backendRootUrl);
 // input.disabled = true;
 // console.log(todos);
