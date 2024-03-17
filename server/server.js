@@ -15,6 +15,8 @@ app.get("/", async (req, res) => {
   // console.log(query);
   try {
     const result = await query("select * from task");
+    // console.log(result);
+    // this is for empty database checking.
     const rows = result.rows ? result.rows : [];
     res.status(200).json(rows);
   } catch (error) {
@@ -54,7 +56,6 @@ app.get("/", async (req, res) => {
 
 app.post("/new", async (req, res) => {
   try {
-    console.log(req.body.description);
     const result = await query(
       "insert into task (description) values ($1) returning *",
       [req.body.description]
@@ -84,6 +85,7 @@ app.delete("/delete/:id", async (req, res) => {
   const id = Number(req.params.id);
   try {
     const result = await query("delete from task where id = $1", [id]);
+    // console.log(result);
     res.status(200).json({ id: id });
   } catch (err) {
     console.log(err);
