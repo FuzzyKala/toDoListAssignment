@@ -137,4 +137,11 @@ getTasks();
 // what's the values paras in the query for? is it values = [] an array?
 
 // queries for assignment 7
-//
+// Is it a best practice that the way we separated the RESTful method into individual file?
+// then what's meaning of the server script? like a manager just assign tasks?
+
+// queries for assignment 8
+// what's the meaning for linking the local postgreSQL with the online one? monitoring?
+// project folder arrangement?
+// what are other .env files use for?
+// what kinds of variables I can put in .env file? constant?
