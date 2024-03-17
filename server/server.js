@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 const port = process.env.PORT;
-
+console.log(process.env.foo);
 app.get("/", async (req, res) => {
   // console.log(query);
   try {
