@@ -130,3 +130,6 @@ getTasks();
 
 // queries for assignment 5
 // why should I use async function for delete but doesn't have to for get and post?
+
+// queries for assignment 6
+// what's the values paras in the query for? can i delete since I don't need it?
