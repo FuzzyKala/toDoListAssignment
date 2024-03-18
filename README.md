@@ -34,3 +34,6 @@ npm run devStart
 
 ### UI:
 <img width="1280" alt="UI" src="https://github.com/FuzzyKala/toDoListAssignment/assets/40585857/71432777-4aa6-41e0-be42-b9697ef7bca9">
+
+### Local Database:
+<img width="996" alt="local" src="https://github.com/FuzzyKala/toDoListAssignment/assets/40585857/7b05e6cb-325b-4a2e-9854-d3902b1ed77d">
