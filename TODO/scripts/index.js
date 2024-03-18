@@ -124,17 +124,17 @@ getTasks();
 
 // queries for assignment 4
 // 1. how could I divide code into different parts? base on what kinds of philosophy or logic?
-// 2. why does the meaning of using readJson function to transfer json data to be objects.
+// 2. what is the meaning of using readJson function to transfer json data to be objects.
 // they're already objects. what are the advantages?
 
 // 4. I get a promise when I use fetch method(with await maybe) in async function, is that same as promise I get in "return new promise"
 // 5. how a promise is resolved? by resolve? (todos.addTask(task))
 
 // queries for assignment 5
-// why should I use async function for delete but doesn't have to for get and post?
+// why should I use async function for delete method but doesn't have to for get and post?
 
 // queries for assignment 6
-// what's the values paras in the query for? is it values = [] an array?
+// what's the "values params" in the query function for? is it values = [] an array?
 
 // queries for assignment 7
 // Is it a best practice that the way we separated the RESTful method into individual file?

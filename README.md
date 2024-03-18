@@ -1,4 +1,4 @@
-# TypeScript Demo I did on the class
+# ToDoList Application
 
 <p>
   <!-- iOS -->
@@ -9,34 +9,37 @@
   <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
 </p>
 
-TypeScript is a superset of JavaScript which gives you static types and powerful tooling in Visual Studio Code including autocompletion and useful inline warnings for type errors.
+This is a small practice for OMAK 1st IT students to realize that how a project works.
+Backend : <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
 
 ## 🚀 Start
 
 - Creating a new project:
+
 ```sh
-npx create-react-native-app -t with-typescript
+npm init
 ```
-then `cd` into the project.
+
+then `cd` to the server folder
 
 - Using expo to monitor the result:
+
 ```sh
 npx expo start --tunnel
 ```
-
 
 ## 📝 Product
 
 ### Static receipt layout (ASM1):
 
 - Basic Layout
-<img alt="Static Receipt layout" src="https://github.com/FuzzyKala/react-native-demo/assets/40585857/0405fe6c-9e04-49ed-8c58-8928f77ccf51" width='400'/>
+  <img alt="Static Receipt layout" src="https://github.com/FuzzyKala/react-native-demo/assets/40585857/0405fe6c-9e04-49ed-8c58-8928f77ccf51" width='400'/>
 
 ### Static login layout (ASM2):
 
 - Basic Layout and logic for validation
-<img alt="Static Receipt layout" src="https://github.com/FuzzyKala/react-native-demo/assets/40585857/9364d1bc-3603-41cc-b1fb-67f1ea7f61f0" width='400'/>
-<img alt="Static Receipt layout" src="https://github.com/FuzzyKala/react-native-demo/assets/40585857/fdd1ac7f-a30a-473c-9256-b1c98dccd621" width='400'/>
+  <img alt="Static Receipt layout" src="https://github.com/FuzzyKala/react-native-demo/assets/40585857/9364d1bc-3603-41cc-b1fb-67f1ea7f61f0" width='400'/>
+  <img alt="Static Receipt layout" src="https://github.com/FuzzyKala/react-native-demo/assets/40585857/fdd1ac7f-a30a-473c-9256-b1c98dccd621" width='400'/>
 
 - Debug/Console log
-<img width="1280" alt="log" src="https://github.com/FuzzyKala/react-native-demo/assets/40585857/dd405442-3864-4124-8840-3e071cc68b4c">
+  <img width="1280" alt="log" src="https://github.com/FuzzyKala/react-native-demo/assets/40585857/dd405442-3864-4124-8840-3e071cc68b4c">
