@@ -11,11 +11,11 @@
 
 This is a small practice for OMAK 1st IT students to realize that how a project works.
 
-### <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+### Backend: <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
 
-### <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
+### Frontend: <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
 
-### <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
+### Database: <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
 
 ## 🚀 Start
 
