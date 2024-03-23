@@ -27,20 +27,23 @@ npm run devStart
 
 ## 📝 Product
 
-### Render deployment:
+### Render Dashboard:
 
-<img width="966" alt="Render deployment" src="https://github.com/FuzzyKala/toDoListAssignment/assets/40585857/ddd2982b-c76e-4c31-b2df-92f3886326cc">
+<img width="1280" alt="dashboard" src="https://github.com/FuzzyKala/toDoListAssignment/assets/40585857/cbf43aa0-899b-4397-9a19-b84d86093eb3">
 
 ### UI:
 
-<img width="1280" alt="UI" src="https://github.com/FuzzyKala/toDoListAssignment/assets/40585857/71432777-4aa6-41e0-be42-b9697ef7bca9">
+<img width="1280" alt="UI" src="https://github.com/FuzzyKala/toDoListAssignment/assets/40585857/6c968328-eab8-43c2-b063-3e322cd41f9b">
 
 ### Local Database:
 
-<img width="996" alt="local" src="https://github.com/FuzzyKala/toDoListAssignment/assets/40585857/7b05e6cb-325b-4a2e-9854-d3902b1ed77d">
+<img width="1029" alt="Local Database" src="https://github.com/FuzzyKala/toDoListAssignment/assets/40585857/47b2eea6-d6a9-408a-83f4-e726a9ba374a">
 
 ### Note:
 
 1. The folders should be arranged properly and makes sense for maintenance and extension.
 2. Each functionality should be separated properly and meaningfully for better understanding.
 3. Keep it DRY, Don't Repeat Youself, Try to bundle the reusable code as a package/function/module.
+
+
+<img width="1029" alt="db" src="https://github.com/FuzzyKala/toDoListAssignment/assets/40585857/47b2eea6-d6a9-408a-83f4-e726a9ba374a">
