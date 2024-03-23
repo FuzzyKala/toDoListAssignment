@@ -41,8 +41,7 @@ npm run devStart
 
 ### Note:
 
-1. The folders should be arranged properly and makes sense for maintenance and extension.
+1. The folders should be arranged properly and make sense for maintenance and extension.
 2. Each functionality should be separated properly and meaningfully for better understanding.
-3. Keep it DRY, Don't Repeat Youself, Try to bundle the reusable code as a package/function/module.
-
+3. Keep it DRY, Don't Repeat yourself, and Try to bundle the reusable code as a package/function/module.
 
