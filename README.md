@@ -46,4 +46,3 @@ npm run devStart
 3. Keep it DRY, Don't Repeat Youself, Try to bundle the reusable code as a package/function/module.
 
 
-<img width="1029" alt="db" src="https://github.com/FuzzyKala/toDoListAssignment/assets/40585857/47b2eea6-d6a9-408a-83f4-e726a9ba374a">
